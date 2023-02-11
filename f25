@@ -1,0 +1,10 @@
+function nextPal(val) {
+   let pal=0;
+    for (let i=val+1;;i++)
+    {if ( palindrom(i)){pal=i;break}
+      }
+    return pal ;
+    
+  function palindrom(i){
+  return i.toString()===i.toString().split('').reverse().join('')}
+    }
