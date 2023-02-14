@@ -1,0 +1,7 @@
+var isAnagram = function(test, original) {
+  test = test.replace(/[^\w]/g, '').toLowerCase()
+  original = original.replace(/[^\w]/g, '').toLowerCase()
+  
+  return test.split('').sort().join('') === original.split('').sort().join('');
+
+};
