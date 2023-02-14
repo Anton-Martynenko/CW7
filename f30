@@ -1,0 +1,19 @@
+function solve(s){
+  let upper = 0;
+  let lower = 0;
+  let num = 0;
+  let spec = 0;
+  
+  s.split('').forEach(letter => {
+    if (/[a-z]/.test(letter)) {
+      lower++
+    } else if (/[A-Z]/.test(letter)) {
+      upper++
+    } else if (/[0-9]/.test(letter)) {
+      num++
+    } else {
+      spec++
+    }
+  })
+  return [upper, lower, num, spec]
+}
