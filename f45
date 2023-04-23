@@ -1,0 +1,14 @@
+function outed(meet, boss){
+  let total = 0
+  let result = 0
+  for(let key in meet){
+    if(key==boss) {
+    total += meet[key]*2
+    } else {
+    total += meet[key]
+    }
+  }
+  result = total/Object.keys(meet).length
+  if(result<=5) return 'Get Out Now!'
+  return 'Nice Work Champ!'
+}
