@@ -1,0 +1,13 @@
+function maxSumBetweenTwoNegatives(a) {
+  let [highest, sum, negatives] = [0, 0, 0];
+		for (var i = 0; i < a.length; i++) {
+			if (a[i] < 0) {
+		  		if (sum > highest) highest = sum;
+		  		negatives++;
+		  		sum = 0;
+			}else if (negatives > 0) {
+		  		sum += a[i];
+			}
+		}
+		return negatives > 1 ? highest : -1;
+}
