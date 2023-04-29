@@ -1,0 +1,4 @@
+function secondSymbol(s, symbol) {
+  let pos1 = s.indexOf(symbol);           
+  return s.indexOf(symbol, pos1 + 1) ? s.indexOf(symbol, pos1 + 1) : -1;
+}
