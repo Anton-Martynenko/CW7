@@ -1,0 +1,10 @@
+function lastDigit(n, d) {
+  let splitedN = Array.from(String(n), Number);;
+  if (d <= 0) {
+    return [];
+  } else if (d > n.length) {
+    return splitedN;
+  } else {    
+    return splitedN.slice(-d);
+  }
+}
