@@ -1,0 +1,3 @@
+function convertPalindromes(numbers) {
+  return numbers.map(e => e === [...e.toString()].reverse().join`` * 1 ? 1 : 0);
+};
