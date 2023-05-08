@@ -1,0 +1,3 @@
+function switcheroo(x){
+  return x.replace(/[ab]/g, function($1) { return $1 === 'a' ? 'b' : 'a' });
+}
