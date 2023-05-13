@@ -1,0 +1,11 @@
+Array.prototype.remove_ = function(integer_list, values_list){
+  for(var i = 0; i < integer_list.length; i++){
+    for(var j = 0; j < values_list.length; j++){
+      if(integer_list[i] == values_list[j]){
+      integer_list.splice(i,1)
+      i--
+        }
+      }
+    } 
+ return integer_list
+}
