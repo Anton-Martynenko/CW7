@@ -1,0 +1,8 @@
+function dateNbDays(a0, a, p) {
+	let result = 1;
+  for (let i = 0; a0 < a; i++) {
+    result++;
+    a0 += a0 * (p / 36000);
+  }
+  return JSON.stringify(new Date(2016, 0, result)).slice(1, 11);
+}
