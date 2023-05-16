@@ -1,0 +1,4 @@
+function duplicates(arr) {
+  let result = arr.filter((e, index, arr) => arr.indexOf(e) !== index);
+  return [... new Set(result)]
+  }
