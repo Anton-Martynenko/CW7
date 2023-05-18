@@ -1,0 +1,12 @@
+function intRac(n, guess) {
+    let steps = 0;
+    
+    while (true) {
+        steps++;
+        const newGuess = Math.floor((guess + Math.floor(n / guess)) / 2);
+        if (Math.abs(guess - newGuess) < 1)
+            break;
+        guess = newGuess;
+    }
+    return steps;
+}
