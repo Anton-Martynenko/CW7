@@ -1,0 +1,6 @@
+function remember(str) {
+  let arr = {};
+  let result = [];
+  str.split``.map(v=>{arr[v]=arr[v]?arr[v]+1:1;if (arr[v]===2) result.push(v)});
+  return result;
+}
