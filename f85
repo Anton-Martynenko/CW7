@@ -1,0 +1,7 @@
+function zeroPlentiful(arr){
+  let zeros = arr.map(n => (n === 0 ? 0 : 1))
+      .join('')
+      .match(/0+/g) || []
+
+  return zeros.every(z => z.length > 3) ? zeros.length : 0;
+}
