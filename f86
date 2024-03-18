@@ -1,0 +1,4 @@
+function deleteNth(arr,n){
+  let result = {};
+  return arr.filter(v => (result[v] = ~~result[v] + 1) <= n)
+}
