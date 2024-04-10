@@ -1,0 +1,7 @@
+function sortEmotions(arr, order){
+  let emotions = [ ':D', ':)', ':|', ':(', 'T_T' ];
+  if (order){
+    return arr.sort((a,b) => emotions.indexOf(a) - emotions.indexOf(b));
+  }
+  return arr.sort((a,b) => emotions.indexOf(b) - emotions.indexOf(a));
+}
