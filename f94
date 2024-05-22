@@ -1,0 +1,23 @@
+function addCheckDigit(number) {
+  const numberToString = number.toString();
+  let factor = 2;
+  let sum = 0;
+  for (let i = numberToString.length - 1; i >= 0; --i) {
+    sum+= parseInt(numberToString[i]) * factor;
+    /*factor++;
+    if (factor > 7) {
+      factor = 2;
+    }*/
+    factor = (factor === 7) ? 2 : factor + 1;
+  }
+  const remaind = sum % 11;
+  let check;
+  if (remaind === 0) {
+    check = 0;
+  } else if (remaind === 1) {
+    check = 'X';
+  } else {
+    check = 11 - remaind;
+  }
+  return `${number}${check}`;
+}
