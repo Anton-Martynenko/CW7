@@ -1,0 +1,32 @@
+function numberGenerator() {
+  let arr = [];
+  for (let i = 0; arr.length !== 6; i++){
+    let x = randomizer(1, 49)
+    if (!arr.includes(x)) arr.push(x)
+  } 
+  arr = arr.sort((a, b) => a - b);
+  arr.push(randomizer(0, 9));
+  return arr;
+}
+function randomizer(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
+function checkForWinningCategory(checkCombination, winningCombination) {
+  let s = false;
+  let count = 0;
+  checkCombination.slice(0, 6).map((v, i) => winningCombination.slice(0, 6).includes(v) ? count++ : 0);
+  if (checkCombination[checkCombination.length - 1] === winningCombination[winningCombination.length - 1])s = true
+  if (count === 6 && s) return 1
+  if (count === 6 && !s) return 2
+  if (count === 5 && s) return 3
+  if (count === 5 && !s) return 4
+  if (count === 4 && s) return 5
+  if (count === 4 && !s) return 6
+  if (count === 3 && s) return 7
+  if (count === 3 && !s) return 8
+  if (count === 2 && s) return 9
+  return -1
+}
