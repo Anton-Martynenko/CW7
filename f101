@@ -1,0 +1,9 @@
+function findArea(points) {
+  let area = 0;
+  for(let i = 1; i < points.length; i++) {
+    const averageHeight = (Math.abs(points[i].Y) +  Math.abs(points[i-1].Y))/2;
+    const width = points[i].X - points[i-1].X;
+    area += width*averageHeight;
+  }
+  return area;
+}
