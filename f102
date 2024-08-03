@@ -1,0 +1,15 @@
+function solve(a,b){
+  let isPrime = num => {
+    for(let i = 2, s = Math.sqrt(num); i <= s; i++){
+      if(num % i === 0) return false;
+    } return num > 1;
+  }
+
+  let prime = '';
+  
+  for(let i = 0; prime.length < a+b; i++){
+    if(isPrime(i) === true) prime+= i;
+  }
+  
+  return (prime.slice(a, a+b));
+}
